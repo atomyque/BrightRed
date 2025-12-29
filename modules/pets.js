@@ -1,6 +1,7 @@
 import { Module } from "../module"
 import { queueMessage } from "../utils/partyMessage"
 
+// Thanks to @Noamm9 for helping me with the regex
 const regex = new RegExp("Autopet equipped your \\[Lvl .*] (.*)! VIEW RULE|You summoned your (.*)!|You despawned your (.*)!")
 
 const rgstr = register("chat", (petrule, spawned, despawned, event) => {

@@ -2,3 +2,8 @@ import "./wall"
 
 import "./modules/teleport"
 import "./modules/pets"
+import "./modules/puzzles"
+import "./modules/tps"
+import "./modules/lag"
+import "./modules/lostToLag"
+import "./modules/wardrobe"

@@ -2,14 +2,14 @@ let messageQueue = []
 let lastCall = Date.now()
 
 export function queueMessage(message) {
-  const now = Date.now()
-  if (now - lastCall > 500) {
-    partyMessage(message)
-    lastCall = now
-    return
-  }
+  // const now = Date.now()
+  // if (now - lastCall > 500) {
+  //   partyMessage(message)
+  //   lastCall = now
+  //   return
+  // }
   messageQueue.push(message)
-  lastCall = now
+  // lastCall = now
 }
 
 function partyMessage(message) {

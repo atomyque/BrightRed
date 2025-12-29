@@ -57,8 +57,10 @@ register("tick", () => {
       found = true
     }
     if (l.includes("Catacombs")) {
+      if (!l.includes("§r§b§lDungeon: §r§7Catacombs§r")) return
       inDungeons = true
       Module.enableAll()
+      found = true
     }
   })
 })
