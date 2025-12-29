@@ -1,0 +1,28 @@
+{
+    "modules": {
+        "Teleport": {
+            "toggled": false
+        },
+        "Pet Change": {
+            "toggled": true
+        },
+        "Puzzle Count": {
+            "toggled": true
+        },
+        "Instance Start Tps": {
+            "toggled": true
+        },
+        "Server Lag": {
+            "toggled": true
+        },
+        "Lost To Lag": {
+            "toggled": true
+        },
+        "Wardrobe Switch": {
+            "toggled": true
+        },
+        "Chest Secret": {
+            "toggled": true
+        }
+    }
+}

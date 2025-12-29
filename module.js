@@ -1,4 +1,7 @@
+import PogObject from "../PogData"
+
 let modules = []
+let data = new PogObject("BrightRed", {modules: []}, "modulesData.json")
 
 class Module {
   constructor(name, register, description = "No Desciption Set", toggled = false) {
@@ -36,12 +39,37 @@ class Module {
       module.register.register()
     })
   }
+
+  static save() {
+    const json = {}
+    modules.forEach(m => {
+      json[m.name] = { toggled: m.toggled }
+    })
+
+    data.modules = json
+    data.save()
+  }
+
+  static load() {
+    Object.keys(data.modules).forEach((m) => {
+      const name = m
+      const toggled = data.modules[m].toggled
+
+      modules.find(mdl => mdl.name ==name)?.toggled = toggled
+    })
+  }
 }
 
 let found = false
 let inDungeons = false
 
+
+register("worldUnload", () => {
+  Module.save()
+})
+
 register("worldLoad", () => {
+  Module.load()
   inDungeons = false
   found = false
   Module.disableAll()
